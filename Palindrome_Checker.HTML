@@ -1,0 +1,41 @@
+<!--Liam McCullough palindrome checker with user input and loop-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome Checker with loop</title>
+    <script>
+     function Palindrome(str){
+        const cleanStr = str.toLowerCase().replace(/[^a-z0-9]/g,'');       
+        return cleanStr === cleanStr.split('').reverse().join('');
+        }
+// Loop is contrlled by a "do - while" statement.  This
+// script will exit when the entered word is "exit".
+
+do {
+
+// prompt user for input using a "prompt" statement to assign the 
+//value of "inputString".
+
+var inputString = prompt("Enter a word or exit");
+
+        
+    if(Palindrome(inputString)) {
+        alert(inputString + " this a Palindrome")
+
+    }else{
+        alert(inputString + " this is not a Palindrome")
+    }
+}
+// as long as the user keeps inputting any word that is not "exit"
+// the function will loop.
+
+while (inputString != "exit");
+
+    </script>
+</head>
+<body>
+
+</body>
+</html> 
