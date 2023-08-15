@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Roll Game</title>
+    <script type="text/javascript">
+// Function RollDice returns the value of a random dice roll.  ramdom creates a 
+// random number btween 0 and 1.
+// Math.floor rounds teh value to the nearest lower integer.
+        function  RollDice(){
+            return Math.floor(Math.random()*6+1);
+        }
+// Roll 2 dice,  assign values to variables
+// create a variable that adds teh two dce values together.
+        var roll1; var roll2; var score; var winner;
+        roll1 = RollDice();
+        roll2 = RollDice();
+        score = roll1 + roll2;
+// Create a condition  that determines if the sum of the two dice is 7 and return a win text
+// If not win then asign a lost text
+        if (score != 7) {winner = "Not equal 7, Sorry you Lost, for another dollar you can try again"
+            
+        } else {winner = "7, Awesome you Won !"
+            
+        }
+
+            function msg(){
+                alert("score =" + roll1 + "+" + roll2 +"=" + score + " : " + winner)
+            }
+
+
+    </script> 
+</head>
+
+<body>
+    <p>Welcome to Dice Game By Liam M.</p>
+    <form>
+        <input type="button" value="Click Here to Play $1" onclick="msg()"/>
+    </form>
+</body>
+
+</html>
