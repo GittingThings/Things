@@ -1,0 +1,46 @@
+<!--Liam McCullough-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name Checker</title>
+    <style>
+label{
+    background-color: aqua;
+}
+    </style>
+    <script>
+        function strCheck(){
+           var fname = document.getElementById("input_fname").value;
+           var lname = document.getElementById("input_lname").value;
+           var concName = "hello  " + fname + " " + lname;
+           document.getElementById("conc_names").innerHTML = concName;
+
+           if(concName > 20){
+            alert("string is")
+           }else{
+            alert("string is less")
+           }
+
+           var zip = document.getElementById("input_zip").value;
+         
+           if(zip == 5) {
+            alert("good")
+           }
+           else{
+            alert("not good")
+           }
+        }
+    </script>
+</head>
+<body>
+    <h1>First name last name zip</h1><br />
+    <p id="conc_names"></p><br />
+
+    <label id="fname_label">Type In First Name</label>&nbsp;<input id="input_fname"type="text" style="width:100px"/><br />
+    <label id="lname_label">Type In Last Name</label>&nbsp;<input id="input_lname"type="text" style="width:100px"/><br />
+    <label id="zip_label">Type In zip</label>&nbsp;<input type="text" style="width:45px"/><br />
+    <button id="run_code" onclick="strCheck()">run check </button>
+</body>
+</html>
