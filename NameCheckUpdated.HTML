@@ -1,0 +1,53 @@
+<!--Liam McCullough-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name Checker</title>
+    <style>
+label{
+    background-color: aqua;
+}
+    </style>
+    <script>
+        //adding together the first and last names
+        function strCheck(){
+           var fname = document.getElementById("input_fname").value;
+           var lname = document.getElementById("input_lname").value;
+           var concName = "Hello  " + fname + " " + lname;
+           var conclength = fname +" "+ lname;
+           var concnumber = conclength.length;
+           document.getElementById("conc_names").innerHTML = concName;
+
+           //Determining if name is less than 20 characters
+           
+           if(concnumber > 20){
+            alert("Full name length is to long," + concnumber + " > 20 characters")
+           }else{
+            alert("Full Name Length OK" )
+           }
+
+           //Determining if zip is 5 figures
+           var zip = document.getElementById("input_zip").value;
+         
+           if(zip.length == 5) {
+            alert("Zip is valid")
+           }
+           else{
+            alert("zip is invalid, not 5 digits long, please re-enter")
+           }
+        }
+    </script>
+</head>
+<body>
+    <h1>First name last name zip</h1><br />
+    <p id="conc_names"></p><br />
+
+    <!--User inputs and labels-->
+    <label id="fname_label">Type In First Name</label>&nbsp;<input id="input_fname"type="text" style="width:100px"/><br />
+    <label id="lname_label">Type In Last Name</label>&nbsp;<input id="input_lname"type="text" style="width:100px"/><br />
+    <label id="zip_label">Type In zip</label>&nbsp;<input type="text" id="input_zip" style="width:45px"/><br />
+    <button id="run_code" onclick="strCheck()">run check </button>
+</body>
+</html>
