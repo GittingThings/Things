@@ -1,0 +1,109 @@
+<!--Liam McCullough-->
+<!-- Added Audio event - Vivaldi, good choice for the cats-->
+<!-- Event Driven Test Script.  Resizes image with mouse over / Reset on mouse-off-->
+<!-- Multi-select drop downbox, re-states selection-->
+<!-- Movesimage to the right and back based on button select-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Event Assignmnet</title>
+    <script>
+
+    
+
+        function myFunction(){
+            var x = document.getElementById("mySelect").value;
+            document.getElementById("demo").innerHTML = x;
+        }
+
+
+        function BigPicture(x) {
+            x.style.height = "600px";
+            x.style.width = "600px";
+        }
+
+        function NormalPicture(x) {
+            x.style.height = "300px";
+            x.style.width = "300px";
+        }
+
+
+        function moveRight(x) {
+            x.style.marginLeft = "700px";
+        }
+
+        function moveBack(x) {
+            x.style.marginLeft = "100px";
+        }
+// Function that will play a .MP3 audio file-->
+        function play() {
+            var audio = document.getElementById("audio");
+            audio.play();
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <alert> Mouse over cat picture to enlarge
+
+    </alert>
+
+    <div>
+        
+<!-- Mouseover / Mouse-off resize image-->
+
+         <img onmouseover="BigPicture(this)" onmouseout="NormalPicture(this)" 
+         style="position: relative; border:0px;"   
+         src="C:\Users\LiamF\JavaScript\th.jpeg"
+         button id="Shift Right" onclick="moveRight(this)"
+         />
+     </div>
+<!-- Start section to add button that plays musid for the cats-->
+        <div id=""audio div">
+<!-- Create button and assign path to MP3 audio file-->
+
+            <input type="button" value="Cats like Vivaldi - Play some music" onclick="play()">
+            <audio id="audio" src="C:\Users\LiamF\Downloads\vivaldi-summer.mp3"></audio>
+            
+        </div>
+
+
+<!-- Select drop down and display entry verification-->
+         <select id="mySelect" onchange="myFunction()">
+            <option value = " ">select your favorite bread</option>
+            <option value = " Toast">Toast</option>
+            <option value = " Pancake">Pancake</option>
+            <option value = " Waffle">Waffle</option>
+            <option value = " Croissant">croissant</option>
+            <option value = " Toast of the french variety">toast of the french variety</option>
+    
+        </select>
+
+        <p> You have selected
+        </p>
+
+        <p id="demo"></p>
+        
+
+        <p> As your favorite bread
+        </p>
+
+
+ <!-- include new picture.  Add "move right" and "move back" buttons to event drive image move-->       
+            <img id="myImage" src="C:\Users\LiamF\JavaScript\Pirate ship Picture.jpg" 
+            style="width:400px;height:400px;margin-left: 0px;"/>
+         
+  
+    <div id="myDiv">
+        <button id="Move Image left" onclick="moveRight(document.getElementById('myImage'))"">Move Image Right</button>
+        <button id="Move mage Back" onclick="moveBack(document.getElementById('myImage'))"">Move Image Back</button>
+      
+    </div>
+         
+   
+</body>
+</html>
