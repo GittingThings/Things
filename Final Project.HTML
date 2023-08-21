@@ -1,0 +1,175 @@
+<!--Liam McCullough-->
+<!-- Added Audio event - Vivaldi, good choice for the cats-->
+<!-- Event Driven Test Script.  Resizes image with mouse over / Reset on mouse-off-->
+<!-- Multi-select drop downbox, re-states selection-->
+<!-- Movesimage to the right and back based on button select-->
+<!-- Added wallpaper, centered everything, added buttons-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Project</title>
+
+    <style type="text/css">  
+        body{
+            background-image: url(https://tse4.mm.bing.net/th?id=OIP.-eCzFcMqAk4PjmfQK9T2bAHaLI&pid=Api&P=0&h=180); background-repeat: no-repeat;
+            background-size: cover;
+
+            text-align: center;
+
+        }
+            h1 {
+                font-style: italic;
+                text-align: center ;
+            
+                color:blue;
+    
+                font-weight: 400;
+
+                background-color:paleturquoise;
+                
+                text-align: center;
+
+                padding: 20px;
+
+                border-style:groove;
+
+                border-color: black;
+
+            }
+
+            p{
+            font-family: Arial, Helvetica, sans-serif;
+            color:black;
+            padding: 10px;
+            font-size: large;
+            }
+    
+            footer{
+                color: blue;
+                text-align: center;
+                margin-right: 200px;
+            }
+    
+            #Test{
+                color: blue;
+                font-weight: bold;
+            }
+    
+            .classtest{
+                color: darkred;
+            }
+
+            
+
+            
+        </style>
+
+    <script>
+
+        function myFunction(){
+            var x = document.getElementById("mySelect").value;
+            document.getElementById("demo").innerHTML = x;
+        }
+
+
+        function BigPicture(x) {
+            x.style.height = "600px";
+            x.style.width = "600px";
+        }
+
+        function NormalPicture(x) {
+            x.style.height = "300px";
+            x.style.width = "300px";
+        }
+
+
+        function moveRight(x) {
+            x.style.marginLeft = "300px";
+        }
+
+        function moveBack(x) {
+            x.style.marginLeft = "0px";
+        }
+// Function that will play a .MP3 audio file-->
+        function play() {
+            var audio = document.getElementById("audio");
+            audio.play();
+        }
+
+
+
+
+    </script>
+
+</head>
+
+<body>
+    <h1>Mouse over cat picture to enlarge <br />
+
+    <button id="UpperButton1" style="width: 200px;height: 50px;">Toast</button>
+    <button id="UpperButton2" style="width: 200px;height: 50px;">Toast</button>
+    <button id="UpperButton3" style="width: 200px;height: 50px;">Toast</button>
+    <button id="UpperButton4" style="width: 200px;height: 50px;">Toast</button>
+
+    <br />
+    Toast
+    </h1>
+    <div>
+        
+<!-- Mouseover / Mouse-off resize image-->
+
+<br />
+         <img onmouseover="BigPicture(this)" onmouseout="NormalPicture(this)" 
+         style="position: relative; border:0px;"   
+         src="C:\Users\LiamF\JavaScript\th.jpeg"
+         button id="Shift Right" onclick="moveRight(this)"
+         />
+     </div>
+<!-- Start section to add button that plays musid for the cats-->
+        <div id="audio div">
+<!-- Create button and assign path to MP3 audio file-->
+
+            <input type="button" value="Cats like Vivaldi - Play some music" onclick="play()">
+            <audio id="audio" src="C:\Users\LiamF\Downloads\vivaldi-summer.mp3"></audio>
+            
+        </div>
+        <br />
+
+
+<!-- Select drop down and display entry verification-->
+         <select id="mySelect" onchange="myFunction()">
+            <option value = " ">select your favorite bread</option>
+            <option value = " Toast">Toast</option>
+            <option value = " Pancake">Pancake</option>
+            <option value = " Waffle">Waffle</option>
+            <option value = " Croissant">croissant</option>
+            <option value = " Toast of the french variety">toast of the french variety</option>
+    
+        </select>
+
+        <p> You have selected
+        </p>
+
+        <p id="demo"></p>
+        
+
+        <p> As your favorite bread
+        </p>
+
+
+ <!-- include new picture.  Add "move right" and "move back" buttons to event drive image move-->       
+            <img id="myImage" src="C:\Users\LiamF\JavaScript\Pirate ship Picture.jpg" 
+            style="width:400px;height:400px;margin-left: 0px;"/>
+         
+  
+    <div id="myDiv">
+        <button id="Move Image left" onclick="moveRight(document.getElementById('myImage'))"">Move Image Right</button>
+        <button id="Move mage Back" onclick="moveBack(document.getElementById('myImage'))"">Move Image Back</button>
+      
+    </div>
+         
+   
+</body>
+</html>
